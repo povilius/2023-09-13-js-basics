@@ -49,6 +49,8 @@
 
 // console.groupEnd()
 
+console.groupCollapsed(`Dėstytojo`)
+
 let originalPassword = 'asdasdasgdfgdfgdg#'
 let password = originalPassword.trim()
 let passwordLength = password.length
@@ -101,4 +103,125 @@ if (isNaN(age)) {
   console.log('Mokyklą baigė')
 } else {
   console.log('Nurodytas amžius yra per didelis, jis negali būti didesnis už 120 metų.')
+}
+
+console.groupEnd()
+
+console.groupCollapsed(`Pirmas lygis`)
+
+
+let correctAnswer11 = `sun`
+let correctAnswer12 = 123
+
+let playerAnswer11 = `moon`
+let playerAnswer12 = 123
+
+console.log(correctAnswer11 === playerAnswer11)
+console.log(correctAnswer12 === playerAnswer12)
+
+console.log(correctAnswer11 === playerAnswer11 && correctAnswer12 === playerAnswer12)
+console.log(correctAnswer11 === playerAnswer11 || correctAnswer12 === playerAnswer12)
+
+if (correctAnswer11 === playerAnswer11 && correctAnswer12 === playerAnswer12) {
+  console.log(`Abu atsakymai teisingi`)
+} else if (correctAnswer11 === playerAnswer11 || correctAnswer12 !== playerAnswer12) {
+  console.log(`Patekai į kitą lygį: pirmas atsakymas buvo teisingas, o antras buvo neteisingas.`)
+} else if (correctAnswer11 !== playerAnswer11 || correctAnswer12 === playerAnswer12) {
+  console.log(`Patekai į kitą lygį: pirmas atsakymas buvo neteisingas, o antras buvo teisingas.`)
+} else {
+  console.log(`Nepatekai į kitą lygį: abu atsakymai buvo neteisingi.`)
+}
+
+console.groupEnd()
+
+console.groupCollapsed(`Antras lygis`)
+
+let correctAnswer21 = `sun`
+let correctAnswer22 = 123
+
+let playerAnswer21 = `moon`
+let playerAnswer22 = 123
+
+console.log(correctAnswer11 === playerAnswer11)
+console.log(correctAnswer12 === playerAnswer12)
+
+console.log(correctAnswer11 === playerAnswer11 && correctAnswer12 === playerAnswer12)
+console.log(correctAnswer11 === playerAnswer11 || correctAnswer12 === playerAnswer12)
+
+if (correctAnswer21 === playerAnswer21 && correctAnswer22 === playerAnswer22) {
+  console.log(`Abu atsakymai teisingi, patekote į kitą lygį.`)
+} else if (correctAnswer21 !== playerAnswer21) {
+  console.log(`Nepatekai į kitą lygį: pirmas atsakymas buvo neteisingas.`)
+} else if (correctAnswer22 !== playerAnswer22) {
+  console.log(`Nepatekai į kitą lygį: antras atsakymas buvo neteisingas.`)
+} else {
+  console.log(`Nepatekai į kitą lygį: abu atsakymai buvo neteisingi.`)
+}
+
+console.groupEnd()
+
+console.groupCollapsed(`Trečias lygis`)
+
+
+let correctAnswer31 = `sun`
+let correctAnswer32 = 123
+let correctAnswer33 = 456
+
+let playerAnswer31 = `sund`
+let playerAnswer32 = 1233
+let playerAnswer33 = 4564
+
+console.log(correctAnswer31 === playerAnswer31)
+console.log(correctAnswer32 === playerAnswer32)
+console.log(correctAnswer33 === playerAnswer33)
+
+console.log(correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33)
+console.log(correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 !== playerAnswer33)
+console.log(correctAnswer31 !== playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33)
+
+if (correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33) {
+  console.log(`Visi atsakymai teisingi, patekote į kitą lygį.`)
+} else if (correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 !== playerAnswer33) {
+  console.log(`Patekote į kitą lygį: Trečias atsakymas buvo neteisingas.`)
+} else if (correctAnswer32 !== playerAnswer32 && correctAnswer31 === playerAnswer31 && correctAnswer33 === playerAnswer33) {
+  console.log(`Patekote į kitą lygį: Antras atsakymas buvo neteisingas.`)
+} else if (correctAnswer31 !== playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33) {
+  console.log(`Patekote į kitą lygį: Pirmas atsakymas buvo neteisingas.`)
+} 
+
+else if (correctAnswer31 === playerAnswer31 && correctAnswer32 !== playerAnswer32 && correctAnswer33 !== playerAnswer33) {
+  console.log(`Nepatekai į kitą lygį: Tik pirmas atsakymas atsakytas teisingai.`)
+} else if (correctAnswer31 !== playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 !== playerAnswer33) {
+  console.log(`Nepatekai į kitą lygį: Tik antras atsakymas atsakytas teisingai.`)
+} else if (correctAnswer31 !== playerAnswer31 && correctAnswer32 !== playerAnswer32 && correctAnswer33 === playerAnswer33) {
+  console.log(`Nepatekai į kitą lygį: Tik trečias atsakymas atsakytas teisingai.`)
+} else {
+  console.log(`Nepatekai į kitą lygį: visi atsakymai buvo neteisingi.`)
+}
+
+console.groupEnd()
+
+
+let isLoggedIn = true
+let userName = `John`
+let time = 5
+let isBirthday = false
+
+if (isLoggedIn = true) {
+  if (isBirthday = true) {
+    console.log(`${time}, ${userName} and have a great birthday!`)
+  } else {
+    console.log(`${time}, ${userName}!`)
+  }
+} else {
+  console.log(`${time}!`)
+}
+
+
+if (time > 5 && time < 12) {
+  console.log(`Good Morning`)
+} else if (time > 13 && time < 18) {
+  console.log(`Good Afternoon`)
+} else if (time > 19 && time < 4) {
+  console.log(`Good Evening`)
 }
